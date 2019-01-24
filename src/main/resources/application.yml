@@ -1,0 +1,16 @@
+zuul:
+  routes:
+    greetings:
+      path: /greeting/**
+      serviceId: GREETING-SERVICE
+      stripPrefix: false
+# Discovery Server Access
+
+eureka:
+  client:
+    registerWithEureka: false
+    serviceUrl:
+      defaultZone: http://localhost:7777/eureka/
+
+server:
+  port: 8080   # HTTP (Tomcat) port
